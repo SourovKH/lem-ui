@@ -1,3 +1,5 @@
+import * as S from './styles/facilities.styles';
+
 const Facilities = () => {
   const facilities = [
     { title: "Nutritious Food", desc: "Pure veg and non-veg meals served three times a day with high hygiene standards." },
@@ -9,21 +11,21 @@ const Facilities = () => {
   ];
 
   return (
-    <div className="facilities-container">
-      <header className="page-header">
-        <h1 className="hero-title">Our Facilities</h1>
-        <p className="hero-subtitle">We provide everything you need for a comfortable and productive student life.</p>
-      </header>
+    <S.FacilitiesContainer>
+      <S.PageHeader>
+        <S.PageTitle>Our Facilities</S.PageTitle>
+        <S.PageSubtitle>We provide everything you need for a comfortable and productive student life.</S.PageSubtitle>
+      </S.PageHeader>
       
-      <div className="info-grid">
+      <S.InfoGrid>
         {facilities.map((f, i) => (
-          <div key={i} className="info-card">
-            <h3>{f.title}</h3>
-            <p>{f.desc}</p>
-          </div>
+          <S.InfoCard key={i}>
+            <S.CardTitle>{f.title}</S.CardTitle>
+            <S.CardDesc>{f.desc}</S.CardDesc>
+          </S.InfoCard>
         ))}
-      </div>
-    </div>
+      </S.InfoGrid>
+    </S.FacilitiesContainer>
   );
 };
 

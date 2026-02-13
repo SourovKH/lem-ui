@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import * as S from './styles/landing-page.styles';
 
 const LandingPage = () => {
   const highlights = [
@@ -6,30 +7,30 @@ const LandingPage = () => {
   ];
 
   return (
-    <section className="hero-section" style={{ paddingTop: '2rem' }}>
-      <h1 className="hero-title">A Home Away from Home for Students</h1>
-      <p className="hero-subtitle">
+    <S.HeroSection>
+      <S.HeroTitle>A Home Away from Home for Students</S.HeroTitle>
+      <S.HeroSubtitle>
         Focus on your studies while we take care of your living. Lokenath Engineering Mess (LEM) provides premium accommodation with all essential student facilities.
-      </p>
+      </S.HeroSubtitle>
       
-      <div className="highlights-bar">
+      <S.HighlightsBar>
         {highlights.map((h, i) => (
-          <div key={i} className="highlight-item">
-            <span className="highlight-icon">{h.icon}</span>
-            <span className="highlight-label">{h.label}</span>
-          </div>
+          <S.HighlightItem key={i}>
+            <S.HighlightIcon>{h.icon}</S.HighlightIcon>
+            <S.HighlightLabel>{h.label}</S.HighlightLabel>
+          </S.HighlightItem>
         ))}
-      </div>
+      </S.HighlightsBar>
 
-      <div className="cta-group" style={{ marginTop: '3rem' }}>
+      <S.CtaGroup>
         <Link to="/facilities">
-          <button className="btn-primary" style={{ padding: '1rem 3rem' }}>View Facilities</button>
+          <S.PrimaryButton>View Facilities</S.PrimaryButton>
         </Link>
         <Link to="/contact">
-          <button className="btn-secondary" style={{ padding: '1rem 3rem' }}>Get Directions</button>
+          <S.SecondaryButton>Get Directions</S.SecondaryButton>
         </Link>
-      </div>
-    </section>
+      </S.CtaGroup>
+    </S.HeroSection>
   );
 };
 

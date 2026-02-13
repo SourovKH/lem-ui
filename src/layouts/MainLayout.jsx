@@ -1,36 +1,33 @@
-import { Outlet, NavLink, Link } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
+import * as S from './styles/main-layout.styles';
 
 const MainLayout = () => {
   return (
-    <div className="landing-container">
-      <header className="main-header">
-        <div className="header-left">
-          <Link to="/">
-            <img src="/logo.png" alt="LEM Logo" className="app-logo" />
-          </Link>
-        </div>
-
-        <div className="header-middle">
-          <h2 className="pg-name">LEM - Lokenath Engineering Mess</h2>
-        </div>
+    <S.LayoutContainer>
+      <S.Header>
+        <S.LogoLink to="/">
+          <S.AppLogo src="/logo.png" alt="LEM Logo" />
+        </S.LogoLink>
         
-        <nav className="nav-menu">
-          <NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Home</NavLink>
-          <NavLink to="/facilities" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Facilities</NavLink>
-          <NavLink to="/contact" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Contact</NavLink>
-        </nav>
+        <S.TitleContainer>
+          <S.PGName>LEM - Lokenath Engineering Mess</S.PGName>
+        </S.TitleContainer>
+        
+        <S.NavMenu>
+          <S.StyledNavLink to="/">Home</S.StyledNavLink>
+          <S.StyledNavLink to="/facilities">Facilities</S.StyledNavLink>
+          <S.StyledNavLink to="/contact">Contact</S.StyledNavLink>
+        </S.NavMenu>
 
-        <div className="header-right">
-          <Link to="/contact">
-            <button className="btn-primary btn-sm">Enquire Now</button>
-          </Link>
-        </div>
-      </header>
+        <Link to="/contact">
+          <S.EnquireButton>Enquire Now</S.EnquireButton>
+        </Link>
+      </S.Header>
       
-      <main className="content-area">
+      <S.ContentArea>
         <Outlet />
-      </main>
-    </div>
+      </S.ContentArea>
+    </S.LayoutContainer>
   );
 };
 
