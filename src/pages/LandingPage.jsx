@@ -3,7 +3,8 @@ import * as S from './styles/landing-page.styles';
 
 const LandingPage = () => {
   const highlights = [
-    { icon: "🚶", label: "5 mins to station" },
+    { label: "5 mins to station" },
+    { label: "Senior guidance" },
   ];
 
   return (
@@ -16,7 +17,6 @@ const LandingPage = () => {
       <S.HighlightsBar>
         {highlights.map((h, i) => (
           <S.HighlightItem key={i}>
-            <S.HighlightIcon>{h.icon}</S.HighlightIcon>
             <S.HighlightLabel>{h.label}</S.HighlightLabel>
           </S.HighlightItem>
         ))}

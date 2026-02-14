@@ -2,12 +2,9 @@ import * as S from './styles/facilities.styles';
 
 const Facilities = () => {
   const facilities = [
-    { title: "Nutritious Food", desc: "Pure veg and non-veg meals served three times a day with high hygiene standards." },
     { title: "High-Speed WiFi", desc: "Reliable internet connectivity throughout the premises for your academic needs." },
-    { title: "Laundry Service", desc: "Regular laundry and cleaning services to keep your focus on studies." },
-    { title: "24/7 Security", desc: "CCTV surveillance and secure entry points for your peace of mind." },
-    { title: "Power Backup", desc: "Uninterrupted power supply for late-night study sessions." },
-    { title: "Clean Drinking Water", desc: "RO purified water available around the clock." }
+    { title: "Drinking Water", desc: "24/7 purified water available." },
+    { title: "Book Library", desc: "A quiet, well-stocked books for engineering students. Both technical and non-technical books are available."}
   ];
 
   return (

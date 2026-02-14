@@ -6,12 +6,23 @@ export const HeroSection = styled.section`
 `;
 
 export const HeroTitle = styled.h1`
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  margin-bottom: 1rem;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin-bottom: 1.5rem;
   color: var(--text-primary);
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   animation: fadeIn 0.8s ease-out;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 768px) {
+    letter-spacing: -0.02em;
+  }
 `;
 
 export const HeroSubtitle = styled.p`
@@ -47,10 +58,6 @@ export const HighlightItem = styled.div`
     border-color: var(--accent-primary);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   }
-`;
-
-export const HighlightIcon = styled.span`
-  font-size: 1.5rem;
 `;
 
 export const HighlightLabel = styled.span`
