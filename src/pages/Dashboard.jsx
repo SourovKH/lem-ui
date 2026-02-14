@@ -1,13 +1,17 @@
-import * as S from './styles/dashboard.styles';
+import {
+  DashboardContainer,
+  PageTitle,
+  ContentBox
+} from './styles/dashboard.styles';
 
 const Dashboard = () => {
   return (
-    <S.DashboardContainer>
-      <S.PageTitle>Private Dashboard</S.PageTitle>
-      <S.ContentBox>
+    <DashboardContainer>
+      <PageTitle>Private Dashboard</PageTitle>
+      <ContentBox>
         <p>Management features coming soon...</p>
-      </S.ContentBox>
-    </S.DashboardContainer>
+      </ContentBox>
+    </DashboardContainer>
   );
 };
 

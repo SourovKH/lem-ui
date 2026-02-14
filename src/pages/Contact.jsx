@@ -1,32 +1,42 @@
-import * as S from './styles/contact.styles';
+import {
+  ContactContainer,
+  PageHeader,
+  PageTitle,
+  PageSubtitle,
+  InfoGrid,
+  InfoCard,
+  CardTitle,
+  CardText,
+  AddressBox
+} from './styles/contact.styles';
 
 const Contact = () => {
   return (
-    <S.ContactContainer>
-      <S.PageHeader>
-        <S.PageTitle>Contact Us</S.PageTitle>
-        <S.PageSubtitle>Reach out for inquiries or to visit the premises.</S.PageSubtitle>
-      </S.PageHeader>
+    <ContactContainer>
+      <PageHeader>
+        <PageTitle>Contact Us</PageTitle>
+        <PageSubtitle>Reach out for inquiries or to visit the premises.</PageSubtitle>
+      </PageHeader>
 
-      <S.InfoGrid>
-        <S.InfoCard>
-          <S.CardTitle>Contact Details</S.CardTitle>
-          <S.CardText><strong>Phone:</strong> +91 98765 43210</S.CardText>
-          <S.CardText><strong>Alternative:</strong> +91 87654 32109</S.CardText>
-          <S.CardText><strong>Email:</strong> contact@lempg.com</S.CardText>
-        </S.InfoCard>
+      <InfoGrid>
+        <InfoCard>
+          <CardTitle>Contact Details</CardTitle>
+          <CardText><strong>Phone:</strong> +91 98765 43210</CardText>
+          <CardText><strong>Alternative:</strong> +91 87654 32109</CardText>
+          <CardText><strong>Email:</strong> contact@lempg.com</CardText>
+        </InfoCard>
 
-        <S.InfoCard>
-          <S.CardTitle>Our Address</S.CardTitle>
-          <S.AddressBox>
-            <S.CardText><strong>LEM - Lokenath Engineering Mess</strong></S.CardText>
-            <S.CardText>123 Student Avenue, Near Engineering College,</S.CardText>
-            <S.CardText>Salt Lake, Sector V,</S.CardText>
-            <S.CardText>Kolkata, West Bengal - 700091</S.CardText>
-          </S.AddressBox>
-        </S.InfoCard>
-      </S.InfoGrid>
-    </S.ContactContainer>
+        <InfoCard>
+          <CardTitle>Our Address</CardTitle>
+          <AddressBox>
+            <CardText><strong>LEM - Lokenath Engineering Mess</strong></CardText>
+            <CardText>123 Student Avenue, Near Engineering College,</CardText>
+            <CardText>Salt Lake, Sector V,</CardText>
+            <CardText>Kolkata, West Bengal - 700091</CardText>
+          </AddressBox>
+        </InfoCard>
+      </InfoGrid>
+    </ContactContainer>
   );
 };
 

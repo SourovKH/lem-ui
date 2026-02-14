@@ -1,33 +1,44 @@
 import { Outlet, Link } from 'react-router-dom';
-import * as S from './styles/main-layout.styles';
+import {
+  LayoutContainer,
+  Header,
+  LogoLink,
+  AppLogo,
+  TitleContainer,
+  PGName,
+  NavMenu,
+  StyledNavLink,
+  EnquireButton,
+  ContentArea
+} from './styles/main-layout.styles';
 
 const MainLayout = () => {
   return (
-    <S.LayoutContainer>
-      <S.Header>
-        <S.LogoLink to="/">
-          <S.AppLogo src="/logo.png" alt="LEM Logo" />
-        </S.LogoLink>
+    <LayoutContainer>
+      <Header>
+        <LogoLink to="/">
+          <AppLogo src="/logo.png" alt="LEM Logo" />
+        </LogoLink>
         
-        <S.TitleContainer>
-          <S.PGName>LEM - Lokenath Engineering Mess</S.PGName>
-        </S.TitleContainer>
+        <TitleContainer>
+          <PGName>LEM - Lokenath Engineering Mess</PGName>
+        </TitleContainer>
         
-        <S.NavMenu>
-          <S.StyledNavLink to="/">Home</S.StyledNavLink>
-          <S.StyledNavLink to="/facilities">Facilities</S.StyledNavLink>
-          <S.StyledNavLink to="/contact">Contact</S.StyledNavLink>
-        </S.NavMenu>
+        <NavMenu>
+          <StyledNavLink to="/">Home</StyledNavLink>
+          <StyledNavLink to="/facilities">Facilities</StyledNavLink>
+          <StyledNavLink to="/contact">Contact</StyledNavLink>
+        </NavMenu>
 
         <Link to="/contact">
-          <S.EnquireButton>Enquire Now</S.EnquireButton>
+          <EnquireButton>Enquire Now</EnquireButton>
         </Link>
-      </S.Header>
+      </Header>
       
-      <S.ContentArea>
+      <ContentArea>
         <Outlet />
-      </S.ContentArea>
-    </S.LayoutContainer>
+      </ContentArea>
+    </LayoutContainer>
   );
 };
 

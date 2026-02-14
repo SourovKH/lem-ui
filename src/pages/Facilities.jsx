@@ -1,4 +1,13 @@
-import * as S from './styles/facilities.styles';
+import {
+  FacilitiesContainer,
+  PageHeader,
+  PageTitle,
+  PageSubtitle,
+  InfoGrid,
+  InfoCard,
+  CardTitle,
+  CardDesc
+} from './styles/facilities.styles';
 
 const Facilities = () => {
   const facilities = [
@@ -8,21 +17,21 @@ const Facilities = () => {
   ];
 
   return (
-    <S.FacilitiesContainer>
-      <S.PageHeader>
-        <S.PageTitle>Our Facilities</S.PageTitle>
-        <S.PageSubtitle>We provide everything you need for a comfortable and productive student life.</S.PageSubtitle>
-      </S.PageHeader>
+    <FacilitiesContainer>
+      <PageHeader>
+        <PageTitle>Our Facilities</PageTitle>
+        <PageSubtitle>We provide everything you need for a comfortable and productive student life.</PageSubtitle>
+      </PageHeader>
       
-      <S.InfoGrid>
+      <InfoGrid>
         {facilities.map((f, i) => (
-          <S.InfoCard key={i}>
-            <S.CardTitle>{f.title}</S.CardTitle>
-            <S.CardDesc>{f.desc}</S.CardDesc>
-          </S.InfoCard>
+          <InfoCard key={i}>
+            <CardTitle>{f.title}</CardTitle>
+            <CardDesc>{f.desc}</CardDesc>
+          </InfoCard>
         ))}
-      </S.InfoGrid>
-    </S.FacilitiesContainer>
+      </InfoGrid>
+    </FacilitiesContainer>
   );
 };
 
